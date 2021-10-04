@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Document generator</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+<body>
+<main role="main" class="container">
+
+    <h1>Document generator</h1>
+    <form action="#" th:action="@{/template-document}" th:object="${documentTemplateRequest}" method="post">
+        <div class="mb-3">
+            <label for="ownerName" class="form-label">Text:</label>
+            <textarea type="text" th:field="*{ownerName}" class="form-control" id="ownerName" rows="3"></textarea>
+            <label for="accountNumber" class="form-label">Text:</label>
+            <textarea type="text" th:field="*{accountNumber}" class="form-control" id="accountNumber" rows="3"></textarea>
+            <label for="dateFrom" class="form-label">Text:</label>
+            <textarea type="text" th:field="*{dateFrom}" class="form-control" id="dateFrom" rows="3"></textarea>
+            <label for="dateTo" class="form-label">Text:</label>
+            <textarea type="text" th:field="*{dateTo}" class="form-control" id="dateTo" rows="3"></textarea>
+        </div>
+        <p><input class="btn btn-primary" type="submit" value="Generate" />
+            <input class="btn btn-primary" type="reset" value="Reset" />
+        </p>
+    </form>
+
+    <p>
+        <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+            About creator
+        </a>
+    </p>
+    <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+            <dl>
+                <dt>Студент</dt>
+                <dd>Пищулёнок Максим Сергеевич</dd>
+
+                <dt>Курс</dt>
+                <dd>4</dd>
+
+                <dt>Группа</dt>
+                <dd>4</dd>
+
+                <dt>Год</dt>
+                <dd>2021</dd>
+            </dl>
+
+        </div>
+    </div>
+
+    </div>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+</html>

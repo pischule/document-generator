@@ -1,4 +1,4 @@
-package bsu.pischule.documentgenerator.Document;
+package bsu.pischule.documentgenerator.simpledocument;
 
 import lombok.Data;
 
