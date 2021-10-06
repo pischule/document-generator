@@ -124,7 +124,7 @@
                 <executions>
                     <execution>
                         <id>copy-resource-one</id>
-                        <phase>generate-sources</phase>
+                        <phase>process-classes</phase>
                         <goals>
                             <goal>copy-resources</goal>
                         </goals>
